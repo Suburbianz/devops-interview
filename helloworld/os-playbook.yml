@@ -1,0 +1,22 @@
+---
+- name: Configure OS settings
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Add Docker alias
+      lineinfile:
+        path: /etc/bash.bashrc
+        line: "alias d='docker'"
+
+    - name: Add Docker Compose alias
+      lineinfile:
+        path: /etc/bash.bashrc
+        line: "alias dc='docker compose'"
+
+    - name: Create topsecret.txt file
+      copy:
+        dest: /etc/topsecret.txt
+        content: "t0ps3cr3t"
+        owner: root
+        group: root
+        mode: '0400'

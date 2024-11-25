@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\helloworld",
+    "\\helloworld\\gradle",
+    "\\helloworld\\gradle\\wrapper",
+    "\\helloworld\\src",
+    "\\helloworld\\src\\main",
+    "\\helloworld\\src\\main\\java",
+    "\\helloworld\\src\\main\\java\\com",
+    "\\helloworld\\src\\main\\java\\com\\ilionx",
+    "\\helloworld\\src\\main\\java\\com\\ilionx\\helloworld",
+    "\\helloworld\\src\\main\\resources"
+  ],
+  "SelectedNode": "\\helloworld\\src\\main\\resources\\application.properties",
+  "PreviewInSolutionExplorer": false
+}
