@@ -18,11 +18,9 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: 17
-
-    - name: Set directory
-      working-directory: ./projects/helloworld
-
+      
     - name: Build with Gradle
+      working-directory: ./projects/helloworld
       run: ./gradlew clean build --no-daemon
 
     - name: Build Docker image
