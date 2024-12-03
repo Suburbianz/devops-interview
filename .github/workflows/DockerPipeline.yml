@@ -20,7 +20,6 @@ jobs:
         java-version: 17
       
     - name: Build with Gradle
-      working-directory: ./projects/helloworld
       run: |
         sed -i 's/\r$//' ./gradlew
         chmod +x ./gradlew
