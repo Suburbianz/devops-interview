@@ -21,7 +21,10 @@ jobs:
       
     - name: Build with Gradle
       working-directory: ./projects/helloworld
-      run: ./gradlew clean build --no-daemon
+      run: |
+        sed -i 's/\r$//' ./gradlew
+        chmod +x ./gradlew
+        ./gradlew clean build --no-daemon
 
     - name: Build Docker image
       run: docker build -t helloworld-app .
