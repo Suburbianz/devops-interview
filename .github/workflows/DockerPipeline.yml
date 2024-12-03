@@ -31,3 +31,8 @@ jobs:
 
     - name: Test Docker container
       run: docker run -d -p 8080:8080 helloworld-app
+
+    - name: Test HTTP Response
+      run: |
+        sleep 5
+        curl -v http://localhost:8080
