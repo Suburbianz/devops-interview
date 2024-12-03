@@ -20,11 +20,11 @@ jobs:
         java-version: 17
       
     - name: Build with Gradle
-      
+      working-directory: ./helloworld
       run: |
         sed -i 's/\r$//' ./gradlew
         chmod +x ./gradlew
-        ./helloworld/gradlew clean build --no-daemon
+        ./gradlew clean build --no-daemon
 
     - name: Build Docker image
       run: docker build -t helloworld-app ./helloworld
