@@ -1,0 +1,28 @@
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: 17
+
+    - name: Build with Gradle
+      run: ./gradlew clean build
+
+    - name: Build Docker image
+      run: docker build -t helloworld-app .
+
+    - name: Test Docker container
+      run: docker run -d -p 8080:8080 helloworld-app
